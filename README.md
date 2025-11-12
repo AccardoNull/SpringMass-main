@@ -1,2 +1,1 @@
-# SpringMassTemplate
-Template for spring mass assignment
+A Spring Mass Simulation made in Unity engine.
