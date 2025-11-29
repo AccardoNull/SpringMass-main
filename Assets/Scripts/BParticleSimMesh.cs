@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// Check this out we can require components be on a game object!
 [RequireComponent(typeof(MeshFilter))]
 
 public class BParticleSimMesh : MonoBehaviour
@@ -50,8 +49,6 @@ public class BParticleSimMesh : MonoBehaviour
 
 
     /*** 
-     * I've given you all of the above to get you started
-     * Here you need to publicly provide the:
      * - the ground plane transform (Transform)
      * - handlePlaneCollisions flag (bool)
      * - particle mass (float)
@@ -76,17 +73,6 @@ public class BParticleSimMesh : MonoBehaviour
 
     /// <summary>
     /// Init everything
-    /// HINT: in particular you should probbaly handle the mesh, init all the particles, and the ground plane
-    /// HINT 2: I'd for organization sake put the init particles and plane stuff in respective functions
-    /// HINT 3: Note that mesh vertices when accessed from the mesh filter are in local coordinates.
-    ///         This script will be on the object with the mesh filter, so you can use the functions
-    ///         transform.TransformPoint and transform.InverseTransformPoint accordingly 
-    ///         (you need to operate on world coordinates, and render in local)
-    /// HINT 4: the idea here is to make a mathematical particle object for each vertex in the mesh, then connect
-    ///         each particle to every other particle. Be careful not to double your springs! There is a simple
-    ///         inner loop approach you can do such that you attached exactly one spring to each particle pair
-    ///         on initialization. Then when updating you need to remember a particular trick about the spring forces
-    ///         generated between particles. 
     /// </summary>
     void Start()
     {
@@ -113,18 +99,6 @@ public class BParticleSimMesh : MonoBehaviour
         IntegrateSymplectic(dt);
         UpdateMeshFromParticles();
     }
-
-
-
-    /*** BIG HINT: My solution code has as least the following functions
-     * InitParticles()
-     * InitPlane()
-     * UpdateMesh() (remember the hint above regarding global and local coords)
-     * ResetParticleForces()
-     * ...
-     ***/
-
-
 
     /// <summary>
     /// Draw a frame with some helper debug render code
