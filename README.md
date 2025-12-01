@@ -21,8 +21,8 @@ Features include:
 
 - The mesh bounds and normals are correctly updated after the mesh is modified.
 
-- The symplectic Euler integration scheme is implemented correctly.
+- The symplectic Euler integration scheme is implemented.
 
-- The simulator loop correctly updates all particle states using the correct update callback and time. 
+- The simulator loop updates all particle states using the update callback and time. 
 
 - The recorded testcase requires that the: blue cube has particle spring properties ks = 200 and kd = 0 the red cube ks = 80 and kd = 0.8 and the green cube ks = 45 and kd = 0.2.
