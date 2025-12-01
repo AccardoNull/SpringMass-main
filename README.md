@@ -1,7 +1,7 @@
 
 WebGL build: https://accardonull.github.io/SpringMass-main/
 
-A Spring Mass Simulation made in Unity engine with a softbody physics system consist of three differently parametrized soft cubes and their interaction with a flat ground.
+A Spring Mass Simulation made in Unity engine with a softbody physics system consist of three differently parametrized soft cubes and their interactions with a flat ground.
 
 Features include:
 
