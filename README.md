@@ -5,15 +5,15 @@ A Spring Mass Simulation made in Unity engine with a softbody physics system con
 
 Features include:
 
-- Automatic initialization of the particles. Every vertex in a the mesh has an associated particle and in the correct coordinate system. 
+- Automatic initialization of the particles. Every vertex in the mesh has an associated particle and in the correct coordinate system. 
 
-- Automatic initialization of the spring configuration. All particles in a mesh are connected to all other particles by a single spring. The rest length is correctly computed from the initial mesh configuration.
+- Automatic initialization of the spring configuration. All particles in a mesh are connected to all other particles by a single spring. The rest length is computed from the initial mesh configuration.
 
-- Initialization of the ground plane. The ground contact penetration penalty springs are initialized when penetration is detected, just once during the duration of the penalty. The attach point for the penalty spring is the nearest point on the plan from the particle at the moment the contact penetration is detection. The spring has the property values and rest length. 
+- The ground contact penetration penalty springs are initialized when penetration is detected, just once during the duration of the penalty. The attach point for the penalty spring is the nearest point on the plan from the particle at the moment the contact penetration is detection. The spring has the property values and rest length. 
 
 -  The ground contact penetration penalty springs are updated during the penalty and detached when the collision is resolved.
 
-- The vertices of the mesh are updated in the correct coordinate system, at the end of each simulation loop.
+- The vertices of the mesh are updated at the end of each simulation loop.
 
 - The particle-particle spring forces are computed and the reflected force "trick" is used to reduce redundant computations of spring forces between particle pairs.
 
@@ -22,5 +22,3 @@ Features include:
 - The symplectic Euler integration scheme is implemented.
 
 - The simulator loop updates all particle states using the update callback and time. 
-
-- The recorded testcase requires that the: blue cube has particle spring properties ks = 200 and kd = 0 the red cube ks = 80 and kd = 0.8 and the green cube ks = 45 and kd = 0.2.
