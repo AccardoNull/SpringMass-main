@@ -1,3 +1,4 @@
+# Spring Mass Simulation
 
 WebGL build: https://accardonull.github.io/SpringMass-main/
 
