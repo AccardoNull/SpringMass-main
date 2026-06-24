@@ -2,6 +2,9 @@
 ## Overview
 A Spring Mass Simulation made in Unity engine with a soft-body physics system consists of three differently parametrized soft cubes and their interactions with a flat ground.
 
+## Demo
+- WebGL build: https://accardonull.github.io/SpringMass-main/
+  
 ## Features
 - Automatic initialization of the particles. Every vertex in the mesh has an associated particle and in the correct coordinate system. 
 
@@ -21,5 +24,4 @@ A Spring Mass Simulation made in Unity engine with a soft-body physics system co
 
 - The simulator loop updates all particle states using the update callback and time. 
 
-## Demo
-- WebGL build: https://accardonull.github.io/SpringMass-main/
+
